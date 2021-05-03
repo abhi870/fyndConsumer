@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092, localhost:9093, localhost:9094
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: singleConsumer
+
+
+file:
+  size-threshold: 1
+#  in mbs
+  time-threshold: 1
+#  in mins
+
+server:
+  port: 9779
